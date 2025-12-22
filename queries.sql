@@ -22,3 +22,6 @@ WHERE
         WHERE
             b.vehicle_id = v.vehicle_id
     )
+
+-- problem 03 (where)
+SELECT * FROM vehicles AS v WHERE v.type = 'car'
