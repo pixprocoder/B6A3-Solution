@@ -24,4 +24,14 @@ WHERE
     )
 
 -- problem 03 (where)
-SELECT * FROM vehicles AS v WHERE v.type = 'car'
+SELECT * FROM vehicles AS v WHERE v.type = 'car';
+
+-- problem 04 (group by and having)
+SELECT v.vehicle_name, COUNT(b.booking_id) as total_bookings
+FROM vehicles AS v
+    INNER JOIN bookings AS b ON v.vehicle_id = b.vehicle_id
+GROUP BY
+    v.vehicle_id,
+    v.vehicle_name
+HAVING
+    COUNT(b.booking_id) > 1;
