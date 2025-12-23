@@ -1,10 +1,3 @@
--- get all
-SELECT * FROM users;
-
-SELECT * FROM vehicles;
-
-SELECT * FROM bookings;
-
 -- problem 01 (join)
 SELECT b.booking_id, u.name as customer_name, v.vehicle_name, b.start_date, b.end_date, b.status
 FROM
